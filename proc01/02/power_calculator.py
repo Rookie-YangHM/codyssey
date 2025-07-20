@@ -24,6 +24,9 @@ def main():
         숫자 입력이 숫자형이 아닐 경우 "Invalid number input." 출력
         지수 입력이 정수가 아닐 경우 "Invalid exponent input." 출력
 
+    지수가 음수일 때에도 처리:
+        음수 지수는 내부적으로 양수 지수만큼 곱한 뒤 결과의 역수(1/result)를 계산
+        
     테스트 방식:
         Visual Studio Code에서 power_calculator.py 파일을 열고 터미널에서 python power_calculator.py 명령어로 실행한다.
 
@@ -38,11 +41,16 @@ def main():
     # 입력받은 지수는 int로 변경
     exponent = int(input("Enter exponent: "))
 
-    # 어떤 수든 0번 곱하면 1이 되기 때문에, 결과값을 1로 미리 설정.
-    result = 1
-    # exponent(제곱할 횟수)만큼 반복해서 number(숫자)를 곱해요.
-    for _ in range(exponent):
-      result *= number
+    # 0번 지수 처리: 어떤 수든 0번 곱하면 1
+    result = 1.0
+    count = abs(exponent)
+
+    for _ in range(count):
+        result *= number
+
+    # 지수가 음수일 경우 역수 계산
+    if exponent < 0:
+        result = 1 / result
 
     # 계산된 결과값을 화면에 출력
     print(f"Result: {result}")
