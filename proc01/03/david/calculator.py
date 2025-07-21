@@ -19,9 +19,9 @@ def divide(a, b):
 # main 함수처럼 사용하는 코드 블록
 if __name__ == "__main__":
     try:
-        # 사용자로부터 숫자 2개를 입력받음
-        a = int(input("Enter the first number: "))
-        b = int(input("Enter the second number: "))
+        # 사용자로부터 실수형 숫자 2개를 입력받음
+        a = int(float(input("Enter the first number: ")))
+        b = int(float(input("Enter the second number: ")))
         
         # 연산자 입력
         operator = input("Enter operator (+, -, *, /): ")

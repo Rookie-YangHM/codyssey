@@ -55,8 +55,8 @@ if __name__ == "__main__":
 
     elif mode == "2":
         try:
-            a = int(input("Enter the first number: "))
-            b = int(input("Enter the second number: "))
+            a = int(float(input("Enter the first number: ")))
+            b = int(float(input("Enter the second number: ")))
             operator = input("Enter operator (+, -, *, /): ")
 
             if operator == "+":
