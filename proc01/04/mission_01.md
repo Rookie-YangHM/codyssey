@@ -49,11 +49,38 @@
 - `git config --global --list` 명령어로 설정된 내용을 확인
 - `git config --global -e` 명령어로 전역 설정파일을 에디터로 열어 확인
 
-### ✅ 기본 에디터를 바꿨음
-- Git의 기본 에디터를 Visual Studio Code로 바꾸는 설정을 했음.
+### ✅ 기본 에디터 변경
+
+- Git에서 커밋 메시지 등을 작성할 때 사용할 기본 에디터를 Visual Studio Code로 설정
+
+#### 📌 Windows
+
+- VS Code에서 Command Palette(`Ctrl + Shift + P`) 실행
+- `Shell Command: Install 'code' command in PATH` 선택하여 `code` 명령어 사용 가능하게 설정
+- 다음 명령어 입력으로 Git 기본 에디터 설정
   ```
   git config --global core.editor "code --wait"
   ```
+
+#### 📌 macOS
+
+- VS Code에서 Command Palette(`Cmd + Shift + P`) 실행
+- `Shell Command: Install 'code' command in PATH` 실행
+- 다음 명령어 입력으로 Git 기본 에디터 설정
+  ```
+  git config --global core.editor "code --wait"
+  ```
+
+#### 📌 Linux
+
+- `code` 명령어가 PATH에 있는지 확인 (보통 `/usr/bin/code` 또는 `/snap/bin/code`)
+- 필요한 경우 `sudo ln -s`로 심볼릭 링크 생성
+- 다음 명령어 입력으로 Git 기본 에디터 설정
+  ```
+  git config --global core.editor "code --wait"
+  ```
+
+- `--wait` 옵션은 VS Code에서 에디팅을 마치고 창을 닫을 때까지 Git이 대기하도록 설정
 
 ### ✅ 작업 디렉토리에 Git 저장소를 작성
 - `app.py` 파일이 있는 디렉토리로 이동
