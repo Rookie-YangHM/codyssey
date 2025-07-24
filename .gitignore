@@ -1,1 +1,6 @@
 .DS_Store
+
+# 파이썬 가상환경
+venv/
+# VS Code 설정 폴더
+.vscode/
