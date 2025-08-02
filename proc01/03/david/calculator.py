@@ -22,7 +22,8 @@ if __name__ == "__main__":
         # 사용자로부터 실수형 숫자 2개를 입력받음
         a = int(float(input("Enter the first number: ")))
         b = int(float(input("Enter the second number: ")))
-        
+        # ⚠️ float와 동시에 int값은 계산후 최종 int 처리과 값이 다름에 유의한다!
+
         # 연산자 입력
         operator = input("Enter operator (+, -, *, /): ")
 
